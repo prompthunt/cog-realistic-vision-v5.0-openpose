@@ -52,8 +52,8 @@ class Predictor(BasePredictor):
             choices=["EulerA", "MultistepDPM-Solver"],
             description="Choose a scheduler",
         ),
-        width: int = Input(description="Width", ge=0, le=1920, default=512),
-        height: int = Input(description="Height", ge=0, le=1920, default=728),
+        width: int = Input(description="Width", ge=0, le=1920, default=768),
+        height: int = Input(description="Height", ge=0, le=1920, default=768),
         seed: int = Input(description="Seed (0 = random, maximum: 2147483647)", default=0),
     ) -> Path:
         """Run a single prediction on the model"""
